@@ -1,0 +1,159 @@
+:root {
+  color-scheme: light;
+  --background: #ffffff;
+  --text: #202124;
+  --muted: #5f6368;
+  --line: #dadce0;
+  --link: #1a73e8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text);
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.page {
+  width: min(720px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 56px 0 48px;
+}
+
+.intro {
+  padding-bottom: 28px;
+}
+
+h1,
+.name-local {
+  margin: 0;
+  font-size: clamp(1.72rem, 5.2vw, 2.58rem);
+  font-weight: 300;
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.name-line {
+  display: grid;
+  grid-template-columns: 1.22em auto;
+  column-gap: 0.34em;
+  align-items: baseline;
+  width: max-content;
+}
+
+.family-name {
+  display: inline-block;
+}
+
+.name-local {
+  margin: 8px 0 0;
+  color: var(--text);
+}
+
+.role {
+  margin: 24px 0 0;
+  font-size: 1.08rem;
+}
+
+.affiliation {
+  margin: 2px 0 0;
+  font-size: 1.02rem;
+}
+
+p {
+  margin: 0;
+}
+
+.role span,
+.affiliation span {
+  margin-left: 0.7em;
+  color: var(--muted);
+}
+
+.top-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 24px;
+  height: 24px;
+}
+
+.icon-link {
+  display: inline-grid;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  place-items: center;
+  color: inherit;
+  line-height: 1;
+  opacity: 0.82;
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+
+.icon-link img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.icon-link-round {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.icon-link-round img {
+  width: 24px;
+  height: 24px;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+}
+
+.icon-link-researchmap {
+  width: 102px;
+}
+
+.icon-link-researchmap img {
+  width: 102px;
+  height: auto;
+  max-width: none;
+  max-height: 15px;
+  object-fit: contain;
+}
+
+.icon-link:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 560px) {
+  .page {
+    width: min(100% - 28px, 720px);
+    padding: 40px 0 36px;
+  }
+
+  .intro {
+    padding-bottom: 24px;
+  }
+
+}
